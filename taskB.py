@@ -94,7 +94,7 @@ class Editor:
                 stripped_line = line.strip()
                 line_list = stripped_line.split()
                 list_of_lists.append(line_list)
-            print(list_of_lists[list_num])
+            print(list_of_lists[line_num])
 
     def delete_num(self, line_num):
         """ Delete a line of text stored in self.text_lines specified by
