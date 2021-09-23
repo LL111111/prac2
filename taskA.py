@@ -95,6 +95,8 @@ class Editor:
         """
         if int(line_num) < 0:
             raise ValueError('cannot be less than 0')
+        elif self.text_lines.is_empty():
+            raise EditorError('?')
         else:
             passage = self.text_lines.delete_at_index(line_num - 1)
 
