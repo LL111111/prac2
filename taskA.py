@@ -93,8 +93,8 @@ class Editor:
         """ Delete a line of text stored in self.text_lines specified by
             the input argument.
         """
-        if int(line_num) < 0:
-            raise ValueError('cannot be less than 0')
+        if line_num == 0:
+            raise EditorError('?')
         elif self.text_lines.is_empty():
             raise EditorError('?')
         else:
